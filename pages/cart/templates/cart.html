@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% set page_head_title = 'My Shopping Cart' %}
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('cart.static', filename='css/cart.css') }}"/>
+{% endblock %}
+{%if session.login%}
+    {% block page_body_main_content %}
+<div class="shopping-cart">
+    <!-- Title -->
+    <div class="title">
+        {{session.name}}'s Shopping Bag
+    </div>
+
+    <!-- Product #1 -->
+    {%for item in items%}
+        <div class="item">
+            <div class="buttons">
+                <span class="delete-btn"></span>
+                <span class="like-btn"></span>
+            </div>
+
+            <div class="image">
+                {%if item.type == "Jacket"%}
+                <img src={{url_for('catalog.static',filename='media/גקט1.jpg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+                {%if item.type == "Pants"%}
+                <img src={{url_for('catalog.static',filename='media/מכנס3.jpg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+                {%if item.type == "Dress"%}
+                <img src={{url_for('catalog.static',filename='media/שמלה1.jpg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+                {%if item.type == "Coat"%}
+                <img src={{url_for('catalog.static',filename='media/מעיל1.jpg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+                {%if item.type == "Jeans"%}
+                <img src={{url_for('catalog.static',filename='media/גינס.jpeg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+                {%if item.type == "Socks"%}
+                <img src={{url_for('catalog.static',filename='media/גרביים1.jpg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+                {%if item.type == "Sweater"%}
+                <img src={{url_for('catalog.static',filename='media/סוודר1.jpg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+                {%if item.type == "T-shirt"%}
+                <img src={{url_for('catalog.static',filename='media/טישירט.jpg')}} alt={{item.ID}} style=width:50%>
+                {%endif%}
+            </div>
+
+            <div class="description">
+                <span>Name:   {{item.name}}</span>
+                <span>Color:   {{item.color}}</span>
+                <span>Size:   {{item.size}}</span>
+                <span>Price:   {{item.price}}</span>
+            </div>
+
+
+        </div>
+    {%endfor%}
+    <div name="total" id="total" style="text-align: center">Total Price: {{Total}}</div>
+       </div>
+
+
+
+<form action="/ordernow">
+    <button class="order" type="submit" style="text-align: center" value="submit">Order Now!</button>
+</form>
+    {% endblock %}
+{% block page_body_js %}
+<script src="{{ url_for('cart.static', filename='js/cart.js') }}"></script>
+{% endblock %}
+{%endif%}

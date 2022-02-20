@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'edit' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('edit.static', filename='css/edit.css') }}"/>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('edit.static', filename='js/edit.js') }}"></script>
+{% endblock %}
+
+{% set page_title = 'Edit' %}
+{% if session.login %}
+    {% block page_body_main_content %}
+    <div class="container">
+        <div class="card">
+            <form action="/changedetails" method="post" style="display:inline">
+                <div class="info"> <span>Edit form</span> <button type=submit id="savebutton" >EDIT</button> </div>
+                <div class="forms">
+                    <div class="inputs"> <span>Full Name</span> <input type="text" name="fullname"readonly value={{fullname}}> </div>
+                    <div class="inputs"> <span>phone</span> <input type="tel" name="phone" pattern="05[0-9]-[0-9]{3}-[0-9]{4}"  readonly value={{phone}}>
+                    <small>format: 054-245-2343</small></div>
+                    <div class="inputs"> <span>New password</span> <input type="password" name="password" readonly value=> </div>
+                </div>
+            </form>
+            <form action="/selfdelete" method="post" style="display:inline">
+                <div > <button class="button" action="/selfdelete"  method="post"> Delete Account </button></div>
+            </form>
+        </div>
+    </div>
+
+    <div style="text-align: center"><h4>Orders History for {{session.name}}</h4></div>
+    <div class="container">
+        <div class="card2">
+            <form action="/edit" method="get" style="display:inline">
+                {%for order in orders%}
+                    <div class="forms">
+                        <p><h4>Item:</h4>{{order.name}}</p>
+                        <p><h4>Time:</h4>{{order.DT}}</p><p><h4>Price:</h4>{{order.price}}</p>
+                    </div>
+                {%endfor%}
+            </form>
+
+        </div>
+    </div>
+
+
+
+    {% endblock %}
+{%endif%}
+
+
+

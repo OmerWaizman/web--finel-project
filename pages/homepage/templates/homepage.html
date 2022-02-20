@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Homepage' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('homepage.static', filename='css/homepage.css') }}"/>
+{% endblock %}
+<link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous"
+/>
+<link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap"
+        rel="stylesheet"
+/>
+<link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet"
+/>
+<link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+        rel="stylesheet"
+/>
+{% block page_head_js %}
+<script src="{{ url_for('homepage.static', filename='js/homepage.js') }}"></script>
+{% endblock %}
+
+
+{% block page_body_main_content %}
+<div class="home-about">
+    <div class="right">
+        <div>
+            <img src="{{ url_for('homepage.static', filename='media/img.jpg') }}" alt="slider" id="about_pic">
+        </div>
+    </div>
+    <div class="left">
+        <h1>Get 30% Off & Free Shipping</h1>
+        <h4>#Summer Collection 2022</h4>
+        <a href="{{ url_for('catalog.index') }}">
+            <input type="submit" value = "Shop now">
+        </a>
+</div>
+{% endblock %}
+{% block page_body_main_more %}
+
+
+    <div class="home-gallery">
+        <!-- Photo grid -->
+        <div class="photo-row">
+            <div class="photo-col">
+                <img src="{{ url_for('homepage.static', filename='media/picture 1.jpg') }}" style="width:100%" onclick="onClick(this)">
+            </div>
+
+            <div class="photo-col">
+                <img src="{{ url_for('homepage.static', filename='media/picture 3.jpg') }}" style="width:100%" onclick="onClick(this)">
+            </div>
+
+            <div class="photo-col">
+                <img src="{{ url_for('homepage.static', filename='media/picture 2.jpg') }}" style="width:100%" onclick="onClick(this)">
+            </div>
+            <div class="photo-col">
+                <img src="{{ url_for('homepage.static', filename='media/picture 4.jpg') }}" style="width:100%" onclick="onClick(this)">
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="full-image animate-zoom">
+            <img id="img01" class="w3-image">
+            <p id="caption"></p>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'About' %}
+
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('about.static', filename='css/about.css') }}"/>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('about.static', filename='js/about.js') }}"></script>
+{% endblock %}
+
+{% set page_title = 'about' %}
+
+{% block page_body_main_content %}
+<div class="Title_about_page">
+    <h1>Malica</h1>
+    <h3>evening dresses for events</h3>
+</div>
+<div class="aboutText">
+    <div class="aboutLeft">
+    </div>
+    <div class="TextLeft">
+        <p>
+            The Malica fashion store was established by Malki Weizmann about 8 years ago
+            and characterized by a personal and unique shopping experience that sets it apart from the major fashion chains in the market <br>
+            The store is located in the Grand Canyon Beer Sheva and offers designer clothes and evening dresses for events <br>
+    </div>
+</div>
+{% endblock %}
+{% block page_body_main_more %}
+<div>
+    <div class="Title_about_page">
+        <h2>Store opening hours</h2>
+    </div>
+    <div class="table_days">
+        <div class= "day">
+            <p class="text">Sunday <br> 10:00 - 22:00 </p>
+        </div>
+        <div class= "day">
+            <p class="text">Monday <br> 10:00 - 22:00 </p>
+        </div> <div class= "day">
+        <p class="text">Tuesday <br> 10:00 - 22:00 </p>
+    </div> <div class= "day">
+        <p class="text">Wednesday <br> 10:00 - 22:00 </p>
+    </div> <div class= "day">
+        <p class="text">Thursday <br> 10:00 - 22:00 </p>
+    </div> <div class= "day">
+        <p class="text">Friday <br> 10:00 - 15:00 </p>
+    </div> <div class= "day not_working">
+        <p class="text">Saturday <br>  --- close --- </p>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,103 @@
+
+
+.print-text h1{
+    font-size: 70px;
+    margin-bottom: 2%;
+}
+.print-text p{
+    font-size: 20px;
+}
+
+#about_pic{
+    background-size: cover;
+    height: 530px;
+    width: 1262px;
+}
+
+.home-about{
+    display: flex;
+}
+
+.right {
+    width: 50%;
+}
+
+.left {
+    padding: 80px;
+    width: 50%;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: roboto condensed, sans-serif;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 0px;
+    font-weight: lighter;
+    line-height: 72px;
+}
+
+input[type="submit"] {
+    position: absolute;
+    top: 79%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #6c7ae0;
+    border: none;
+    color: white;
+    font-family: roboto condensed, sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+h6 {
+    color: black;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    border: 1px solid whitesmoke;
+    width: 200px;
+    font-size: 40px;
+    font-family: roboto condensed, sans-serif;
+    background-color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+.title_about {
+    border-bottom: solid;
+    width: 13%;
+    margin-top: auto;
+    font-size: 31px;
+}
+
+
+.home-gallery{
+    padding: 60px;
+    height: 500px;
+}
+
+.photo-row{
+    filter: grayscale(50%);
+    height: 260px;
+}
+.photo-col{
+    width: 25%;
+    float: left;
+}
+.photo-col:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.photo-col img {
+    margin-bottom: -6px;
+    cursor: pointer;
+    border-style: none;
+    vertical-align: middle;
+}
+

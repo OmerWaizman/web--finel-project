@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% set page_head_title = 'Product' %}
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('product.static', filename='css/product.css') }}" media="all"/>
+{% endblock %}
+{% block page_body_main %}
+<div id="d1">
+    <div id="d2" class="productDetails">
+
+
+        <div id="headline">
+            <h1>{{product.name}}</h1>
+        </div>
+
+        <div class="SizeSelection">
+            <h5>Price</h5>
+
+            <button class="botton">{{product.price}}₪</button>
+        </div>
+        <div class="ColorSelection">
+            <h5>Item Color</h5>
+            <button class="botton">{{product.color}}</button>
+        </div>
+
+        <div class="SizeSelection">
+            <h5>Item size</h5>
+
+            <button class="botton">{{product.size}}</button>
+        </div>
+
+        <div class="SizeSelection">
+            <h5>Left in Stock</h5>
+
+            <button class="botton">{{product.quantity}}</button>
+        </div>
+
+        <div class="addTO">
+            {%if session.login%}
+                <form action="/addtocart" method="post">
+                    <input type="hidden" name="cart" value="{{product.ID}}">
+                    <input type="submit" class="wishbutton" value="Add to Cart ">
+                </form>
+                </a>
+                <br>
+            {%endif%}
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="d4">
+
+        <div id="d3" class="clearfix">
+            <div>
+                {%if product.type == "Jacket"%}
+                <img src={{url_for('catalog.static',filename='media/גקט1.jpg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+                {%if product.type == "Pants"%}
+                <img src={{url_for('catalog.static',filename='media/מכנס3.jpg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+                {%if product.type == "Dress"%}
+                <img src={{url_for('catalog.static',filename='media/שמלה1.jpg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+                {%if product.type == "Coat"%}
+                <img src={{url_for('catalog.static',filename='media/מעיל1.jpg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+                {%if product.type == "Jeans"%}
+                <img src={{url_for('catalog.static',filename='media/גינס.jpeg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+                {%if product.type == "Socks"%}
+                <img src={{url_for('catalog.static',filename='media/גרביים1.jpg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+                {%if product.type == "Sweater"%}
+                <img src={{url_for('catalog.static',filename='media/סוודר1.jpg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+                {%if product.type == "T-shirt"%}
+                <img src={{url_for('catalog.static',filename='media/טישירט.jpg')}} alt={{product.ID}} style=width:50%>
+                {%endif%}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<div id="Reviews" style="text-align: left;">
+    <h1 id="Rhead">
+        Reviews</h2>
+        <p class="person1">
+            <mark>Person 1<br><br></mark>
+            Great Item! came fast and looks exactly like in the pictures!
+        </p>
+        <hr style="width:100%;text-align:left;margin-left:0">
+        <p class="person1">
+            <mark>Person 2<br><br></mark>
+            this dress is class with zero efford
+        </p>
+        <hr style="width:100%;text-align:left;margin-left:0">
+        <p class="person1">
+            <mark>person 3<br><br></mark>
+            Good dress and amazing service! Thank you Malika!
+        </p>
+
+
+
+</div>
+{% endblock %}

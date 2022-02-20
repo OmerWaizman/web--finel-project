@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% set page_head_title = 'Catalog' %}
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('catalog.static', filename='css/catalog.css') }}"/>
+{% endblock %}
+{% block page_body_main %}
+<div class="wrapper">
+    <form action="/getjackets">
+         <button class="button" type=submit class="button" >Jackets</button>
+    </form>
+        <button formaction="/gettshirts" class="button button2" type=submit class="button" >T-Shirts</button>
+    </form>
+    <form action="/getskirts">
+        <button class="button button3" type=submit class="button" >Skirts</button>
+    </form>
+    <form action="/getpants">
+        <button class="button button4" type=submit class="button" >Pants</button>
+    </form>
+    <form action="/getjeans">
+        <button  class="button button5" type=submit class="button" >Jeans</button>
+    </form>
+    <form action="/getcaots">
+        <button class="button button6" type=submit class="button" >Coats</button>
+    </form>
+</div>
+
+{% for product in products%}
+        <div class="card">
+            {%if product.type == "Jacket"%}
+                <img src={{url_for('catalog.static',filename='media/גקט1.jpg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            {%if product.type == "Pants"%}
+                <img src={{url_for('catalog.static',filename='media/מכנס3.jpg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            {%if product.type == "Dress"%}
+                <img src={{url_for('catalog.static',filename='media/שמלה1.jpg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            {%if product.type == "Coat"%}
+                <img src={{url_for('catalog.static',filename='media/מעיל1.jpg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            {%if product.type == "Jeans"%}
+                <img src={{url_for('catalog.static',filename='media/גינס.jpeg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            {%if product.type == "Socks"%}
+                <img src={{url_for('catalog.static',filename='media/גרביים1.jpg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            {%if product.type == "Sweater"%}
+                <img src={{url_for('catalog.static',filename='media/סוודר1.jpg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            {%if product.type == "T-shirt"%}
+                <img src={{url_for('catalog.static',filename='media/טישירט.jpg')}} alt={{product.ID}} style=width:50%>
+            {%endif%}
+            <h1>{{product.name}}</h1>
+            <p class="price">{{product.price}}</p>
+            <p><b>Color</b>: {{product.color}}</p>
+            <form action="/getproduct" method="get">
+                    <input type="hidden" name="productid" value={{product.ID}}>
+                <label for="productid">
+                <input type="submit" value="See Product">
+                </label>
+            </form>
+        </div>
+    {%endfor%}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

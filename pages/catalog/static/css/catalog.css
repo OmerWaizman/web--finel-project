@@ -1,0 +1,80 @@
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
+
+.button {
+    background-color: #491e6f; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {background-color: #8227a1;} /* Blue */
+.button3 {background-color: #963c9b;} /* Red */
+.button4 {background-color: #945298; color: #ffffff;} /* Gray */
+.button5 {background-color: #c081c5;}
+.button6 {background-color: #efc1f3;}
+
+/* Black */
+
+.container {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+#container {
+    text-align: center;
+}
+
+#button {
+    display: inline-block;
+}

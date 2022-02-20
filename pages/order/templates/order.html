@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% set page_head_title = 'Order Page' %}
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('order.static', filename='css/order.css') }}"/>
+{% endblock %}
+{%if session.login%}
+{% block page_body_main_content %}
+{%if message%}
+    <h1>{{message}}</h1>
+{%endif%}
+<form action="/order" method="post">
+            <label for="address" class="label">Address</label>
+            <input id="address" type="text" name="address" class="input" required><br>
+            <label for="cc_num" class="label">Credit Card Number</label>
+            <input id="cc_num" type="text" name="cc_num" class="input" pattern="[0-9]{16}" required>
+             <small>format: 16 digits (1111222233334444)</small></div><br>
+             <label for="cc_month" class="label">Expiration Month</label>
+            <input id="cc_month" type="text" name="cc_month" pattern="[0-9]{2}" class="input" required>
+            <small>format:  XX </small></div><br>
+    `       <label for="cc_year" class="label">Expiration Year</label>
+            <input id="cc_year" type="text" name="cc_year" pattern="[0-9]{4}" class="input" required>
+            <small>format:  XXXX </small></div><br>
+
+            <input type="submit" class="button" value ="Submit">
+</form>
+
+
+    </div>
+</div>
+{% endblock %}
+{%endif%}
+{% block page_body_js %}
+{% endblock %}
