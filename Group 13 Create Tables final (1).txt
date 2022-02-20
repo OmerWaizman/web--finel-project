@@ -1,0 +1,428 @@
+###Create Users Table###
+CREATE TABLE users (
+                       Email varchar(50) NOT NULL,
+                       Phone varchar(50) DEFAULT NULL,
+                       password varchar(20) DEFAULT NULL,
+                       fullname varchar(30) DEFAULT NULL,
+                       PRIMARY KEY (Email)
+)
+
+
+### insert into Users###
+/* INSERT QUERY NO: 1 */
+INSERT INTO users(Email, fullname, phone, password)
+VALUES
+(
+'Guy@gmail.com', 'Guy', '052-252-5522', 123
+);
+
+/* INSERT QUERY NO: 2 */
+INSERT INTO users(Email, fullname, phone, password)
+VALUES
+(
+'Ido@gmail.com', 'Ido', '052-737-0921', 123
+);
+
+/* INSERT QUERY NO: 3 */
+INSERT INTO users(Email, fullname, phone, password)
+VALUES
+(
+'Michael@gmail.com', 'Michael', '050-050-1234', 123
+);
+
+/* INSERT QUERY NO: 4 */
+INSERT INTO users(Email, fullname, phone, password)
+VALUES
+(
+'Omer@gmail.com', 'Omer', '055-555-5555', 123
+);
+
+###Create Products Table####
+CREATE TABLE products (
+                          ID int NOT NULL,
+                          type varchar(20) DEFAULT NULL,
+                          name varchar(50) DEFAULT NULL,
+                          color varchar(20) DEFAULT NULL,
+                          quantity int DEFAULT NULL,
+                          size varchar(20) DEFAULT NULL,
+                          price float DEFAULT NULL,
+                          PRIMARY KEY (ID)
+)
+
+### INSERT INTO PRODUCTS #####
+/* INSERT QUERY NO: 1 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        1, 'Jacket', 'Orange Jacket', 'Orange', 59, 'Extra Large', 450.2
+    );
+
+/* INSERT QUERY NO: 2 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        2, 'Pants', 'Indigo Pants', 'Indigo', 98, 'Large', 497.6
+    );
+
+/* INSERT QUERY NO: 3 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        3, 'Dress', 'White Dress', 'White', 82, 'Medium', 133.8
+    );
+
+/* INSERT QUERY NO: 4 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        4, 'Dress', 'Purple Dress', 'Purple', 98, 'Extra Small', 386.7
+    );
+
+/* INSERT QUERY NO: 5 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        5, 'T-shirt', 'Fucsia T-Shirt', 'Fuscia', 51, 'Extra Small', 450.2
+    );
+
+/* INSERT QUERY NO: 6 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        6, 'Socks', 'Amazing Socks', 'White', 58, 'Large', 251.3
+    );
+
+/* INSERT QUERY NO: 7 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        7, 'Jacket', 'Edna Jacket', 'Purple', 45, 'Medium', 374.1
+    );
+
+/* INSERT QUERY NO: 8 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        8, 'Coat', 'Winter Coat', 'Black', 51, 'Extra Small', 50.9
+    );
+
+/* INSERT QUERY NO: 9 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        9, 'Dress', 'Item Name', 'Yellow', 78, 'Small', 317.9
+    );
+
+/* INSERT QUERY NO: 10 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        10, 'T-shirt', 'Sport Shirt', 'Black', 93, 'Large', 282.3
+    );
+
+/* INSERT QUERY NO: 11 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        11, 'Jacket', 'Daily Jacket', 'Purple', 96, 'Extra Large', 109.5
+    );
+
+/* INSERT QUERY NO: 12 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        12, 'Jeans', 'Celeb Jeans', 'Yellow', 95, 'Large', 377.6
+    );
+
+/* INSERT QUERY NO: 13 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        13, 'Coat', 'E-Coat', 'Red', 14, 'Medium', 335.2
+    );
+
+/* INSERT QUERY NO: 14 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        14, 'Jeans', 'Lovers Jeans', 'Indigo', 52, 'Large', 385.5
+    );
+
+/* INSERT QUERY NO: 15 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        15, 'Skirt', 'Love Skirt', 'Black', 96, 'Extra Large', 206.7
+    );
+
+/* INSERT QUERY NO: 16 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        16, 'Dress', 'Uniqe Dress', 'Brown', 83, 'Large', 167.3
+    );
+
+/* INSERT QUERY NO: 17 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        17, 'Sweater', 'Uniqe Seater', 'Aquamarine', 35, 'Medium', 251.1
+    );
+
+/* INSERT QUERY NO: 18 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        18, 'Jacket', 'The Jacket', 'Purple', 41, 'Small', 447.3
+    );
+
+/* INSERT QUERY NO: 19 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        19, 'Jacket', 'Unique Jacket', 'Brown', 50, 'Small', 358.6
+    );
+
+/* INSERT QUERY NO: 20 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        20, 'Skirt', 'Unique Skirt', 'Goldenrod', 55, 'Extra Small', 121
+    );
+
+/* INSERT QUERY NO: 21 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        21, 'Jacket', 'Special Jacket', 'Green', 1, 'Extra Small', 313.5
+    );
+
+/* INSERT QUERY NO: 22 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        22, 'Pants', 'Special Pants', 'Purple', 67, 'Large', 418.2
+    );
+
+/* INSERT QUERY NO: 23 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        23, 'Socks', 'Grandma Socks', 'Goldenrod', 79, 'Large', 320.6
+    );
+
+/* INSERT QUERY NO: 24 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        24, 'T-shirt', 'Baby Shirt', 'Pink', 10, 'Large', 42.8
+    );
+
+/* INSERT QUERY NO: 25 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        25, 'Skirt', 'Baby Skirt', 'Red', 81, 'Small', 110.7
+    );
+
+/* INSERT QUERY NO: 26 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        26, 'Socks', 'Baby Socks', 'Green', 57, 'Small', 375.6
+    );
+
+/* INSERT QUERY NO: 27 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        27, 'Pants', 'Snow Pants', 'Purple', 71, 'Medium', 414.9
+    );
+
+/* INSERT QUERY NO: 28 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        28, 'T-shirt', 'Loose T-Shirt', 'Orange', 30, 'Extra Small', 127.2
+    );
+
+/* INSERT QUERY NO: 29 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        29, 'Pants', 'Sweaty Pants', 'Light Blue', 55, 'Large', 475.6
+    );
+
+/* INSERT QUERY NO: 30 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        30, 'Sweater', 'Grandma Sweater', 'Blue', 58, 'Large', 227.3
+    );
+
+/* INSERT QUERY NO: 31 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        31, 'Jacket', 'Large Jacket', 'Light Blue', 26, 'Large', 473.3
+    );
+
+/* INSERT QUERY NO: 32 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        32, 'T-shirt', 'Catalog Shirt', 'Aquamarine', 88, 'Large', 126.4
+    );
+
+/* INSERT QUERY NO: 33 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        33, 'Skirt', 'Work Skirt', 'Aquamarine', 62, 'Extra Large', 40.2
+    );
+
+/* INSERT QUERY NO: 34 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        34, 'T-shirt', 'Work Shirt', 'Khaki', 57, 'Extra Small', 460.4
+    );
+
+/* INSERT QUERY NO: 35 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        35, 'Jeans', 'Morning Jeans', 'Puce', 29, 'Small', 74.1
+    );
+
+/* INSERT QUERY NO: 36 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        36, 'Socks', 'Night Socks', 'Red', 28, 'Large', 227.3
+    );
+
+/* INSERT QUERY NO: 37 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        37, 'Coat', 'Baby Coat', 'Fuscia', 52, 'Large', 112.2
+    );
+
+/* INSERT QUERY NO: 38 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        38, 'T-shirt', 'Shirt-T', 'Khaki', 42, 'Extra Small', 75.1
+    );
+
+/* INSERT QUERY NO: 39 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        39, 'Skirt', 'Princess Skirt', 'Indigo', 51, 'Extra Small', 294.6
+    );
+
+/* INSERT QUERY NO: 40 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        40, 'Coat', 'Malica Coat', 'Blue', 9, 'Extra Large', 157.2
+    );
+
+/* INSERT QUERY NO: 41 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        41, 'Jeans', 'Home Jeans', 'Goldenrod', 53, 'Extra Large', 398.7
+    );
+
+/* INSERT QUERY NO: 42 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        42, 'Socks', 'Home Socks', 'Purple', 11, 'Extra Small', 158.4
+    );
+
+/* INSERT QUERY NO: 43 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        43, 'T-shirt', 'Fall Shirt', 'Indigo', 35, 'Small', 466.2
+    );
+
+/* INSERT QUERY NO: 44 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        44, 'Sweater', 'Summer Sweater', 'Goldenrod', 20, 'Small', 461
+    );
+
+/* INSERT QUERY NO: 45 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        45, 'T-shirt', 'Dad\'s Shirt', 'Pink', 41, 'Large', 481.9
+    );
+
+/* INSERT QUERY NO: 46 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        46, 'Pants', 'Optimal Pants', 'Pink', 66, 'Large', 393.2
+    );
+
+/* INSERT QUERY NO: 47 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        47, 'Jacket', 'Student Jacket', 'Purple', 6, 'Extra Large', 496.5
+    );
+
+/* INSERT QUERY NO: 48 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        48, 'Pants', 'BGU Pants', 'Purple', 6, 'Small', 312.1
+    );
+
+/* INSERT QUERY NO: 49 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        49, 'Pants', 'Malica Pants', 'Yellow', 68, 'Large', 332.5
+    );
+
+/* INSERT QUERY NO: 50 */
+INSERT INTO products(ID, type, name, color, quantity, size, price)
+VALUES
+    (
+        50, 'Jeans', 'Lee-Cooper Jeans', 'Aquamarine', 29, 'Extra Large', 422.9
+    );
+
+
+####Create carts table####
+CREATE TABLE charts (
+                        Email varchar(50) NOT NULL,
+                        ID int NOT NULL,
+                        type varchar(20) DEFAULT NULL,
+                        name varchar(50) DEFAULT NULL,
+                        color varchar(20) DEFAULT NULL,
+                        size varchar(20) DEFAULT NULL,
+                        price float DEFAULT NULL
+)
+
+
+####Create Orders Table###
+
+CREATE TABLE orders (
+                        Email varchar(50) DEFAULT NULL,
+                        ID int DEFAULT NULL,
+                        name varchar(30) DEFAULT NULL,
+                        price float DEFAULT NULL,
+                        DT datetime DEFAULT NULL,
+                        Address varchar(100) DEFAULT NULL,
+                        cc_num varchar(20) DEFAULT NULL,
+                        cc_month varchar(10) DEFAULT NULL,
+                        cc_year varchar(10) DEFAULT NULL
+) 
